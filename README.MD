@@ -22,5 +22,9 @@ go build helloworld.go
 ./helloworld
 ```
 
+获取goimports，可以按需管理导入声明的插入和移除
 
+```shell
+go get golang.org/x/tools/cmd/goimports
+```
 
