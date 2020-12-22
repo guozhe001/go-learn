@@ -26,5 +26,17 @@ go build hello.go
 
 ### 下载和安装包
 ```shell
- go get
+ go get github.com/guozhe001/go-learn
 ```
+
+### 阅读包文档
+```shell
+ go doc fmt
+```
+
+### 指定方法名阅读文档
+```shell
+ go doc strconv ParseFloat
+```
+
+

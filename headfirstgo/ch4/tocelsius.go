@@ -3,8 +3,9 @@ package main
 
 import (
 	"fmt"
-	"keyboard"
 	"log"
+
+	"github.com/guozhe001/go-learn/headfirstgo/ch4/keyboard"
 )
 
 func main() {
