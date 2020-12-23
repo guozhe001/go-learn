@@ -39,4 +39,21 @@ go build hello.go
  go doc strconv ParseFloat
 ```
 
+### 在本地运行一个web的go文档
+```shell
+godoc -http=6060
+```
+如果没有此命令先安装`go get -v  golang.org/x/tools/cmd/godoc`
+如果安装时因为网络原因导致报错，可以设置代理：
+
+```shell
+go env -w GO111MODULE=on
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+
+## 注释的约定
+* 包注释应该以`Package`开头，然后跟着包名
+* 方法注释应该以方法名开头
+
 
