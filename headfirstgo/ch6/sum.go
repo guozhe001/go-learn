@@ -6,6 +6,7 @@ import "fmt"
 func main() {
 	fmt.Println(sum(9, 7))
 	fmt.Println(sum(1, 2, 4))
+	fmt.Println(sum())
 }
 
 func sum(numbers ...int) int {
