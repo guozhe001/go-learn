@@ -11,6 +11,21 @@ type Date struct {
 	day   int
 }
 
+// Year 获取年
+func (d *Date) Year() int {
+	return d.year
+}
+
+// Month 获取月份
+func (d *Date) Month() int {
+	return d.month
+}
+
+// Day 获取日期
+func (d *Date) Day() int {
+	return d.day
+}
+
 // SetYear 设置年
 func (d *Date) SetYear(year int) error {
 	if year < 1 {
