@@ -107,3 +107,12 @@ func (m MyType) sayHi() {
 * 方法可以有其他的参数
 * 方法可以有返回值
 * 方法的首字母大写则认为是导出的，首字母小写则认为是不导出的。
+
+
+## 封装
+类型的属性不导出，方法导出，来实现封装，如：`headfirstgo/ch9/calendar/date.go`
+
+## 嵌入
+如：`headfirstgo/ch9/calendar/event.go`
+
+## 接口
