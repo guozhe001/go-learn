@@ -5,6 +5,9 @@ import "fmt"
 func main() {
 	defineStruct()
 	test()
+	fmt.Println(Gallons(12))
+	fmt.Println(Liters(12))
+	fmt.Println(Milliliters(12))
 }
 
 func defineStruct() {
@@ -87,4 +90,16 @@ func (g Gallons) ToMilliliters() Milliliters {
 
 func (g Gallons) ToLiters() Liters {
 	return Liters(g * 3.785)
+}
+
+func (g Gallons) String() string {
+	return fmt.Sprintf("%0.2f gal", g)
+}
+
+func (l Liters) String() string {
+	return fmt.Sprintf("%0.2f L", l)
+}
+
+func (m Milliliters) String() string {
+	return fmt.Sprintf("%0.2f ml", m)
 }
