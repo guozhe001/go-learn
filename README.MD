@@ -116,3 +116,19 @@ func (m MyType) sayHi() {
 如：`headfirstgo/ch9/calendar/event.go`
 
 ## 接口
+
+
+## 错误处理
+
+### 延迟函数调用：defer
+* 如果一个方法中有多个defer关键字，则这些被defer修饰的调用会按照倒序执行
+* 在return之后的defer语句也不会被执行
+
+### 抛出异常 panic
+* panic很像抛出一个异常
+* panic抛出的异常有堆栈信息
+
+### 捕获异常 recover
+* recover()方法会捕获panic
+
+**不鼓励使用panic和recover，最好使用error来进行判断错误并且处理**
