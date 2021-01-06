@@ -62,3 +62,24 @@ go env -w GOPROXY=https://goproxy.cn,direct
 
 *注意：由于切片只是底层数组内容的视图，如果你修改底层数组，这些变化也会反映到切片*
 *上面的定义反过来也成立：即如果修改了切片的值，底层的数组的值也被修改了*
+
+
+## Go mod
+Go模块管理工具，命令如`go mod download`，更多内容可以输入`go mod`获取帮助信息：
+
+```shell
+
+	go mod <command> [arguments]
+
+The commands are:
+
+	download    download modules to local cache
+	edit        edit go.mod from tools or scripts
+	graph       print module requirement graph
+	init        initialize new module in current directory
+	tidy        add missing and remove unused modules
+	vendor      make vendored copy of dependencies
+	verify      verify dependencies have expected content
+	why         explain why packages or modules are needed
+
+```
