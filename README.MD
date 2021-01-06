@@ -83,3 +83,73 @@ The commands are:
 	why         explain why packages or modules are needed
 
 ```
+
+## 方法
+在函数的名称前面添加“接收器参数名称”和“接收器参数类型”，就变成了方法。
+* **Go使用接收器参数来替代其他语言中的“self”或者“this”**
+* **方法和类型必须定义在同一个包中**
+* **接收器的类型也可以是指针类型**
+* **当你使用非指针的变量调用一个需要指针的接收器的方法时，Go会自动为你将非指针类型转换为指针类型；反之亦然**
+* **所有的方法的接收器类型都应该一致，所以一个类型函数要吗接收值类型的接收器参数，要吗接收指针类型的接收器参数；避免两者同时混用的情况**
+
+如下面的方法，可以说（sayHi方法定义在MyType上），也可以说为类型MyType定义的方法sayHi：
+
+```go
+package main
+
+import "fmt"
+
+type MyType string
+
+func (m MyType) sayHi() {
+	fmt.Println("Hi!")
+}
+
+```
+### 接收器参数（几乎）就是另一个参数
+可以在方法内部使用接收器参数，如改造后的sayHi方法：
+```go
+package main
+
+import "fmt"
+
+type MyType string
+
+func (m MyType) sayHi() {
+	fmt.Println("Hi from", m)
+}
+```
+
+
+*思考，为什么有了函数还需要方法？*
+
+### 方法（几乎）就像一个函数
+* 方法可以有其他的参数
+* 方法可以有返回值
+* 方法的首字母大写则认为是导出的，首字母小写则认为是不导出的。
+
+
+## 封装
+类型的属性不导出，方法导出，来实现封装，如：`headfirstgo/ch9/calendar/date.go`
+
+## 嵌入
+如：`headfirstgo/ch9/calendar/event.go`
+
+## 接口
+
+
+## 错误处理
+
+### 延迟函数调用：defer
+* 如果一个方法中有多个defer关键字，则这些被defer修饰的调用会按照倒序执行
+* 在return之后的defer语句也不会被执行
+
+### 抛出异常 panic
+* panic很像抛出一个异常
+* panic抛出的异常有堆栈信息
+
+### 捕获异常 recover
+* recover()方法会捕获panic
+
+**不鼓励使用panic和recover，最好使用error来进行判断错误并且处理**
+
