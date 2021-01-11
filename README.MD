@@ -64,6 +64,26 @@ go env -w GOPROXY=https://goproxy.cn,direct
 *上面的定义反过来也成立：即如果修改了切片的值，底层的数组的值也被修改了*
 
 
+## Go mod
+Go模块管理工具，命令如`go mod download`，更多内容可以输入`go mod`获取帮助信息：
+
+```shell
+
+	go mod <command> [arguments]
+
+The commands are:
+
+	download    download modules to local cache
+	edit        edit go.mod from tools or scripts
+	graph       print module requirement graph
+	init        initialize new module in current directory
+	tidy        add missing and remove unused modules
+	vendor      make vendored copy of dependencies
+	verify      verify dependencies have expected content
+	why         explain why packages or modules are needed
+
+```
+
 ## 方法
 在函数的名称前面添加“接收器参数名称”和“接收器参数类型”，就变成了方法。
 * **Go使用接收器参数来替代其他语言中的“self”或者“this”**
