@@ -1,12 +1,12 @@
-package main
+package practice
 
 import (
 	"fmt"
 	"strings"
+	"testing"
 )
 
-
-func main(){
+func TestPrintLastIndex(t *testing.T) {
 	PrintLastIndex("abc:dae:hi", ":")
 	PrintLastIndex("abc:dae:h:i", ":")
 	PrintLastIndex("abc:daehi", ":")
