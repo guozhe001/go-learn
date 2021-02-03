@@ -10,6 +10,7 @@ import (
 // Event 事件
 type Event struct {
 	title string
+	// 内嵌Date
 	calendar.Date
 }
 

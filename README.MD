@@ -84,6 +84,16 @@ The commands are:
 
 ```
 
+### 打印go mod依赖关系
+```shell
+go mod graph | grep coreos/etcd
+```
+
+### 指定某个提交版本的依赖
+```shell
+go get github.com/hyperledger/fabric-chaincode-go@f8ef75b1771978c17ed56e52b5bfc22d4bdae5e3
+```
+
 ## 方法
 在函数的名称前面添加“接收器参数名称”和“接收器参数类型”，就变成了方法。
 * **Go使用接收器参数来替代其他语言中的“self”或者“this”**
