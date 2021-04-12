@@ -16,7 +16,6 @@ func main() {
 	target := getRandom()
 	fmt.Println("i have a random number between 1 and 100.")
 	fmt.Printf("can you guess is?")
-	var number int
 	// 是否猜对
 	var success = false
 	reader := bufio.NewReader(os.Stdin)

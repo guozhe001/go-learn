@@ -1,4 +1,4 @@
-package practice
+package reflect
 
 import (
 	"fmt"
